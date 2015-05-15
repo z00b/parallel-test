@@ -1,6 +1,4 @@
-checkout:
-  override:
-    - echo what now?
 test:
   override:
     - echo hello world
+    - ls
