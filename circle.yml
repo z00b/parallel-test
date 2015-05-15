@@ -1,4 +1,4 @@
 test:
   override:
-    - echo hello world
+    - pwd: { parallel: true }
     - ls: { parallel: true }
