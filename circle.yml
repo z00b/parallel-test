@@ -1,4 +1,4 @@
 test:
   override:
     - echo hello world
-    - ls
+    - ls: { parallel: true }
