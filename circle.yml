@@ -1,3 +1,6 @@
+checkout:
+  post:
+    - echo $(git tag --points-at $CIRCLE_SHA1)
 test:
   override:
     - pwd: { parallel: true }
