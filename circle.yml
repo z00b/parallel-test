@@ -1,6 +1,7 @@
 checkout:
   post:
-    - echo $(git tag --points-at $CIRCLE_SHA1)
+    - echo "CIRCLE_GIT_TAG=$(git tag --points-at $CIRCLE_SHA1)" >> ~/.circlerc
+    - echo $CIRCLE_GIT_TAG
 test:
   override:
     - pwd: { parallel: true }
