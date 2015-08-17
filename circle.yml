@@ -1,3 +1,6 @@
+machine:
+  timezone:
+    Asia/Tokyo
 checkout:
   post:
     - echo "CIRCLE_GIT_TAG=$(git tag --points-at $CIRCLE_SHA1)" >> ~/.circlerc
