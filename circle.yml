@@ -4,5 +4,6 @@ checkout:
     - echo $CIRCLE_GIT_TAG
 test:
   override:
+    - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
