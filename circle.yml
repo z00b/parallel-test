@@ -1,6 +1,6 @@
 checkout:
   post:
-    - if [[ $CIRCLE_NODE_INDEX -ne '0' ]]; then cd && rm -rf parallel-test && git clone git+ssh://git@node0:/home/ubuntu/parallel-test.git; fi
+    - if [[ $CIRCLE_NODE_INDEX -ne '0' ]]; then cd && rm -rf parallel-test && git clone git+ssh://ubuntu@node0:/home/ubuntu/parallel-test.git; fi
 test:
   override:
     - lsb_release -a: { parallel: true }
