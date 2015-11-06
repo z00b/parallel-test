@@ -1,5 +1,6 @@
 checkout:
   post:
+    - if [[ $CIRCLE_NODE_INDEX -eq '0' ]]; then git fetch --unshallow; fi
     - if [[ $CIRCLE_NODE_INDEX -ne '0' ]]; then cd && rm -rf parallel-test && git clone git+ssh://ubuntu@node0:/home/ubuntu/parallel-test.git; fi
 test:
   override:
