@@ -1,9 +1,10 @@
 checkout:
   post:
     # - if [[ $CIRCLE_NODE_INDEX -eq '0' ]]; then git fetch --unshallow; fi
-    - if [[ $CIRCLE_NODE_INDEX -ne '0' ]]; then cd && rm -rf parallel-test && git clone ssh://ubuntu@node0:/home/ubuntu/parallel-test; fi
+    - if [[ $CIRCLE_NODE_INDEX -ne '0' ]]; then git fetch ssh://ubuntu@node0:/home/ubuntu/parallel-test; fi
 test:
   override:
     - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
+    - cat circle.yml: { parallel: true }
