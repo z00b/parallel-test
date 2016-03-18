@@ -3,3 +3,5 @@ test:
     - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
+    - mkdir -p $CIRCLE_TEST_REPORTS/nose
+    - cp fake_results.xml $CIRCLE_TEST_REPORTS/nose/
