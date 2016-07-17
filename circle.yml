@@ -3,3 +3,4 @@ test:
     - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
+    - echo 'awesome sauce'
