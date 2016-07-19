@@ -4,3 +4,4 @@ test:
     - pwd: { parallel: true }
     - ls: { parallel: true }
     - echo 'awesome sauce'
+
