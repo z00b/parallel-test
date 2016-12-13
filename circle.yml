@@ -1,6 +1,6 @@
 dependencies:
     pre:
-          - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login --registry=http://registry.acme.io
+          - echo echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login --registry=http://registry.acme.io
 test:
   override:
     - lsb_release -a: { parallel: true }
