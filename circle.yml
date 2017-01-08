@@ -3,4 +3,4 @@ test:
     - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
-    - echo 'awesome sauce' > $CIRCLE_ARTIFACTS/awesome.txt
+    - echo 'awesome sauce' > $CIRCLE_ARTIFACTS/awesome.txt: {parallel: true}
