@@ -5,3 +5,7 @@ test:
     - ls: { parallel: true }
     - sleep 120
     - echo 'awesomest sauce' > $CIRCLE_ARTIFACTS/awesome.txt
+notify:
+  webhooks:
+    # A list of hook hashes, containing the URL field
+    - url: https://requestb.in/1hj2xns1
