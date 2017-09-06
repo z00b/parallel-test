@@ -3,4 +3,5 @@ test:
     - lsb_release -a: { parallel: true }
     - pwd: { parallel: true }
     - ls: { parallel: true }
+    - sleep 120
     - echo 'awesomest sauce' > $CIRCLE_ARTIFACTS/awesome.txt
