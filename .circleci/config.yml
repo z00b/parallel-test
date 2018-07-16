@@ -5,4 +5,4 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run: lsb_release -a
+      - run: uname -a
